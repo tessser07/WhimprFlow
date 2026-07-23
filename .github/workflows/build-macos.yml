@@ -21,8 +21,7 @@ jobs:
         working-directory: ui
         run: pnpm install
       - name: Build app
-        working-directory: ui
-        run: pnpm tauri build
+        run: ui/node_modules/.bin/tauri build
       - name: Upload app
         uses: actions/upload-artifact@v4
         with:
