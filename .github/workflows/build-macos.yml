@@ -25,10 +25,10 @@ jobs:
         run: npm install -g pnpm
 
       - name: Install frontend dependencies
-        run: pnpm --dir ui install
+        run: pnpm -C ui install
 
       - name: Build app
-        run: pnpm --dir ui tauri build
+        run: pnpm -C ui tauri build
 
       - name: Upload app
         uses: actions/upload-artifact@v4
